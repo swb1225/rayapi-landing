@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceptable Use Policy | RayAPI</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0b;
+            --bg-secondary: #111113;
+            --bg-card: #18181b;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent-green: #22c55e;
+            --accent-blue: #3b82f6;
+            --accent-red: #ef4444;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+            --border-color: #27272a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        nav {
+            background: rgba(10, 10, 11, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 0;
+        }
+
+        .nav-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--accent-green);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px 120px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .warning-box strong {
+            color: var(--accent-red);
+        }
+
+        .highlight {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .section-divider {
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0;
+        }
+
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 24px;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">RayAPI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+            <a href="index.html#trial" class="nav-cta">Get API Key</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Acceptable Use Policy</h1>
+        <p class="last-updated">Last Updated: May 2025</p>
+
+        <p>This Acceptable Use Policy ("AUP") outlines the rules and guidelines for acceptable use of RayAPI's services. By using our Service, you agree to comply with this policy. Violations may result in suspension or termination of your account.</p>
+
+        <div class="warning-box">
+            <strong>⚠️ Important:</strong> Violations of this policy may lead to immediate suspension of your account and forfeiture of any fees paid. We cooperate fully with law enforcement and regulatory authorities.
+        </div>
+
+        <h2>1. Prohibited Activities</h2>
+
+        <p>You may not use RayAPI to create, generate, transmit, or facilitate content or activities that:</p>
+
+        <h3>1.1 Illegal Content</h3>
+        <ul>
+            <li>Violate any applicable local, state, national, or international law</li>
+            <li>Facilitate illegal activities, including drug trafficking, human trafficking, or arms dealing</li>
+            <li>Promote or enable terrorism or extremist content</li>
+            <li>Generate false documents, fake IDs, counterfeit currency, or fraudulent certificates</li>
+        </ul>
+
+        <h3>1.2 Harmful Content</h3>
+        <ul>
+            <li>Generate content that is hateful, harassing, or discriminatory based on race, ethnicity, gender, religion, nationality, disability, sexual orientation, or other protected characteristics</li>
+            <li>Create content that exploits, harms, or threatens to harm minors</li>
+            <li>Generate violent, gore, or brutal content without legitimate journalistic, artistic, or educational purpose</li>
+            <li>Promote self-harm, suicide, or eating disorders</li>
+        </ul>
+
+        <h3>1.3 Weapons and Military Use</h3>
+        <ul>
+            <li>Develop, create, or disseminate information related to weapons of mass destruction or biological weapons</li>
+            <li>Generate content for military applications without proper authorization</li>
+            <li>Design weapons, explosives, or hazardous materials</li>
+            <li>Provide instructions for creating explosives or harmful devices</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h3>1.4 Deception and Fraud</h3>
+        <ul>
+            <li>Generate deceptive, misleading, or fraudulent content</li>
+            <li>Create fake reviews, testimonials, or endorsements</li>
+            <li>Impersonate real persons, organizations, or government entities</li>
+            <li>Generate synthetic media (deepfakes) without disclosure for deceptive purposes</li>
+            <li>Engage in phishing, social engineering, or scam operations</li>
+        </ul>
+
+        <h3>1.5 Privacy Violations</h3>
+        <ul>
+            <li>Collect personal information without consent</li>
+            <li>Generate content that invades privacy or discloses confidential information</li>
+            <li>Create content facilitating surveillance without authorization</li>
+            <li>Generate content for stalking, doxxing, or harassment campaigns</li>
+        </ul>
+
+        <h3>1.6 Malicious Activities</h3>
+        <ul>
+            <li>Generate malware, ransomware, viruses, or other malicious code</li>
+            <li>Create content for cybersecurity attacks, hacking, or unauthorized access</li>
+            <li>Develop tools for denial-of-service attacks</li>
+            <li>Generate content for spam or unsolicited communications</li>
+        </ul>
+
+        <h2>2. Prohibited Uses</h2>
+
+        <h3>2.1 Competing Services</h3>
+        <p>You may not use RayAPI to:</p>
+        <ul>
+            <li>Build competing AI API aggregation services</li>
+            <li>Reverse engineer, decompile, or disassemble our Service</li>
+            <li>Scrape or extract data from our platform for competitive purposes</li>
+            <li>Circumvent rate limits or access restrictions</li>
+        </ul>
+
+        <h3>2.2 High-Risk Applications</h3>
+        <p>Use of RayAPI for the following high-risk applications requires careful consideration and may require additional compliance measures:</p>
+        <ul>
+            <li>Medical diagnosis, treatment, or health-related advice</li>
+            <li>Legal advice or representation</li>
+            <li>Financial investment recommendations</li>
+            <li>Critical infrastructure control systems</li>
+            <li>Decisions affecting employment, housing, credit, or essential services</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>Disclaimer:</strong> AI-generated content may contain errors or inaccuracies. For high-stakes decisions, human review and professional consultation are strongly recommended.
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>3. Export Controls and Sanctions Compliance</h2>
+
+        <div class="warning-box">
+            <strong>🚫 Sanctions Notice:</strong> RayAPI strictly prohibits use by individuals or entities located in, or affiliated with, countries subject to comprehensive U.S. or international sanctions.
+        </div>
+
+        <p>You represent and warrant that you are not:</p>
+
+        <ul>
+            <li>Located in, or a national of, a comprehensively sanctioned country (currently including Cuba, Iran, North Korea, Syria, and the Crimea region of Ukraine)</li>
+            <li>Listed on the U.S. Treasury's OFAC Specially Designated Nationals (SDN) List or other restricted party lists</li>
+            <li>Owned or controlled by persons or entities from sanctioned countries</li>
+        </ul>
+
+        <p>You agree not to use our Service for any end use prohibited by applicable export control laws, including:</p>
+        <ul>
+            <li>Developing weapons or military applications</li>
+            <li>Surveillance technologies used for human rights abuses</li>
+            <li>Activities supporting nuclear proliferation or ballistic missile programs</li>
+        </ul>
+
+        <h2>4. Content Moderation</h2>
+
+        <p>While RayAPI does not pre-screen all content, we implement automated systems and manual review to detect and prevent policy violations. We reserve the right to:</p>
+
+        <ul>
+            <li>Monitor API usage patterns for compliance</li>
+            <li>Block or filter content that violates this policy</li>
+            <li>Suspend accounts suspected of violations pending investigation</li>
+            <li>Report illegal content to relevant authorities</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>5. Enforcement</h2>
+
+        <h3>5.1 Violation Consequences</h3>
+        <p>If you violate this policy, we may take the following actions:</p>
+
+        <ul>
+            <li><strong>Warning:</strong> For minor or first-time violations</li>
+            <li><strong>Content Blocking:</strong> Prevent generation of violating content</li>
+            <li><strong>Rate Limiting:</strong> Temporarily restrict API access</li>
+            <li><strong>Account Suspension:</strong> Temporarily disable account access</li>
+            <li><strong>Account Termination:</strong> Permanently disable account and forfeit fees</li>
+            <li><strong>Legal Action:</strong> Pursue damages and injunctive relief where appropriate</li>
+        </ul>
+
+        <h3>5.2 Reporting Violations</h3>
+        <p>If you become aware of any violation of this policy, please report it immediately:</p>
+        <ul>
+            <li><strong>Email:</strong> abuse@rayapi.dev</li>
+            <li><strong>Discord:</strong> Contact our moderation team</li>
+        </ul>
+
+        <h2>6. Your Responsibilities</h2>
+
+        <p>As a RayAPI user, you are responsible for:</p>
+
+        <ul>
+            <li><strong>Compliance:</strong> Ensuring your use of the Service complies with this policy and applicable laws</li>
+            <li><strong>Account Security:</strong> Protecting your API keys and credentials</li>
+            <li><strong>End Users:</strong> If you provide services to third parties, ensuring they also comply with this policy</li>
+            <li><strong>Content Accuracy:</strong> Reviewing AI outputs before use in critical applications</li>
+            <li><strong>Disclosure:</strong> Informing end users when they are interacting with AI-generated content</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>7. Model Provider Requirements</h2>
+
+        <p>Your use of AI models through RayAPI must also comply with the terms of the respective Model Providers:</p>
+
+        <ul>
+            <li><strong>DeepSeek:</strong> Subject to <a href="https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html" target="_blank">DeepSeek Terms of Service</a></li>
+            <li><strong>Qwen (Alibaba Cloud):</strong> Subject to Alibaba Cloud terms of service</li>
+        </ul>
+
+        <p>You are responsible for reviewing and complying with Model Provider terms, which may include restrictions on:</p>
+        <ul>
+            <li>Permitted use cases and industries</li>
+            <li>Geographic restrictions</li>
+            <li>Content moderation requirements</li>
+            <li>Data handling and retention</li>
+        </ul>
+
+        <h2>8. Changes to This Policy</h2>
+
+        <p>We may update this Acceptable Use Policy to reflect changes in our Service, legal requirements, or community standards. Material changes will be communicated through:</p>
+
+        <ul>
+            <li>Email notification to registered users</li>
+            <li>Posting updated policy on our website</li>
+            <li>Announcements in our Discord community</li>
+        </ul>
+
+        <p>Your continued use of the Service after changes constitutes acceptance of the updated policy.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>9. Contact Us</h2>
+
+        <p>If you have questions about this Acceptable Use Policy or need to report a violation, please contact us:</p>
+
+        <ul>
+            <li><strong>General Inquiries:</strong> support@rayapi.dev</li>
+            <li><strong>Abuse Reporting:</strong> abuse@rayapi.dev</li>
+            <li><strong>Discord:</strong> <a href="https://discord.gg/kHt5MFMEa" target="_blank">Join our community</a></li>
+        </ul>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 RayAPI. All rights reserved. | <a href="index.html">Home</a> | <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
