@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | RayAPI</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0b;
+            --bg-secondary: #111113;
+            --bg-card: #18181b;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent-green: #22c55e;
+            --accent-blue: #3b82f6;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+            --border-color: #27272a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        nav {
+            background: rgba(10, 10, 11, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 0;
+        }
+
+        .nav-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--accent-green);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px 120px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .section-divider {
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0;
+        }
+
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 24px;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">RayAPI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="acceptable-use.html">Acceptable Use</a></li>
+            </ul>
+            <a href="index.html#trial" class="nav-cta">Get API Key</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last Updated: May 2025</p>
+
+        <p>Welcome to RayAPI. These Terms of Service ("Terms") are a binding agreement between you ("you" or "your") and RayAPI ("we," "us," or "our") governing your access to and use of our AI API aggregation services.</p>
+
+        <p>By accessing or using RayAPI, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, do not access or use our services.</p>
+
+        <h2>1. Description of Service</h2>
+
+        <p>RayAPI provides a platform that aggregates access to various third-party artificial intelligence models through a unified API interface ("Service"). We act as an intermediary, facilitating your access to AI models provided by third-party suppliers including but not limited to DeepSeek and Alibaba Cloud Qwen (collectively, "Model Providers").</p>
+
+        <p>Our Service enables developers to integrate AI capabilities into their applications, products, and workflows through OpenAI-compatible API endpoints.</p>
+
+        <h2>2. Eligibility</h2>
+
+        <p>You must be at least 18 years of age (or the age of legal majority in your jurisdiction) to use our Service. By agreeing to these Terms, you represent and warrant that:</p>
+
+        <ul>
+            <li>You are at least 18 years of age</li>
+            <li>You have not previously been suspended or removed from our Service</li>
+            <li>Your use of the Service complies with all applicable laws and regulations</li>
+            <li>You are not located in a country subject to comprehensive sanctions</li>
+        </ul>
+
+        <p>If you are using the Service on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.</p>
+
+        <h2>3. Account Registration</h2>
+
+        <p>To access our Service, you must register for an account and maintain accurate information. You are solely responsible for:</p>
+
+        <ul>
+            <li>Maintaining the confidentiality of your account credentials</li>
+            <li>All activities that occur under your account</li>
+            <li>Notifying us immediately of any unauthorized access</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>API Key Security:</strong> Your API key is a sensitive credential. Keep it secure, do not share it publicly, and do not expose it in client-side code. You are responsible for all charges incurred through your API key.
+        </div>
+
+        <h2>4. Model Providers and Third-Party Terms</h2>
+
+        <p>Our Service depends on third-party Model Providers. You acknowledge and agree that:</p>
+
+        <ul>
+            <li>Your access to AI models is subject to the terms of the respective Model Providers</li>
+            <li>You will comply with all applicable Model Provider terms</li>
+            <li>Model Providers may modify their terms at any time</li>
+            <li>We are not responsible for the availability, accuracy, or outputs of third-party models</li>
+        </ul>
+
+        <p>Current Model Providers include DeepSeek (subject to <a href="https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html" target="_blank">DeepSeek Terms of Service</a>) and Alibaba Cloud Qwen.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>5. Acceptable Use</h2>
+
+        <p>You agree to use our Service only for lawful purposes and in accordance with our <a href="acceptable-use.html">Acceptable Use Policy</a>. Prohibited uses include but are not limited to:</p>
+
+        <ul>
+            <li>Generating illegal content or facilitating illegal activities</li>
+            <li>Creating harmful, hateful, or violent content</li>
+            <li>Developing weapons or military applications</li>
+            <li>Generating content that exploits or harms minors</li>
+            <li>Conducting fraudulent or deceptive practices</li>
+            <li>Violating export control or sanctions laws</li>
+        </ul>
+
+        <h2>6. Payments and Billing</h2>
+
+        <p>Our Service is offered through subscription plans:</p>
+
+        <ul>
+            <li><strong>Free Trial:</strong> 3-day access with limited usage</li>
+            <li><strong>Starter:</strong> $29/month</li>
+            <li><strong>Pro:</strong> $99/month</li>
+            <li><strong>Enterprise:</strong> $499/month (custom limits)</li>
+        </ul>
+
+        <p>Payments are processed securely through Stripe. All fees are charged in advance and are non-refundable except as required by law. We reserve the right to modify pricing with 30 days' notice.</p>
+
+        <h2>7. Data and Privacy</h2>
+
+        <p>Your privacy is important to us. Please review our <a href="privacy.html">Privacy Policy</a> for detailed information on how we collect, use, and protect your data.</p>
+
+        <p>Key points:</p>
+
+        <ul>
+            <li>Your prompts and API inputs are not stored or used for model training by default</li>
+            <li>We implement technical measures to protect your data</li>
+            <li>We comply with applicable data protection regulations</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>8. Intellectual Property</h2>
+
+        <p><strong>Your Content:</strong> You retain ownership of the inputs you provide and the outputs generated through our Service, subject to third-party rights.</p>
+
+        <p><strong>Our Service:</strong> RayAPI and its design, features, and branding are our intellectual property. You may not copy, reverse-engineer, or create competing services using our platform.</p>
+
+        <p><strong>Model Outputs:</strong> Outputs generated through AI models may be subject to the intellectual property terms of the respective Model Providers. You are responsible for ensuring your use of outputs complies with applicable terms and laws.</p>
+
+        <h2>9. Service Availability</h2>
+
+        <p>We strive to maintain high availability but do not guarantee uninterrupted access. Our Service is provided "as is" and "as available." We may:</p>
+
+        <ul>
+            <li>Perform scheduled maintenance with advance notice when possible</li>
+            <li>Modify or discontinue features with reasonable notice</li>
+            <li>Suspend or terminate accounts that violate these Terms</li>
+        </ul>
+
+        <h2>10. Limitation of Liability</h2>
+
+        <p>To the maximum extent permitted by law:</p>
+
+        <ul>
+            <li>Our Service is provided "as is" without warranties of any kind</li>
+            <li>We are not liable for indirect, incidental, consequential, or punitive damages</li>
+            <li>Our total liability shall not exceed the fees paid by you in the past 12 months</li>
+            <li>We are not responsible for the accuracy, completeness, or reliability of AI model outputs</li>
+        </ul>
+
+        <p>You acknowledge that AI-generated content may contain errors or inaccuracies and should be reviewed before use in critical applications.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>11. Indemnification</h2>
+
+        <p>You agree to indemnify and hold harmless RayAPI, its affiliates, and their respective officers, directors, and employees from any claims, damages, losses, or expenses (including reasonable attorneys' fees) arising from:</p>
+
+        <ul>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of applicable laws or third-party rights</li>
+            <li>Your use of the Service in a prohibited manner</li>
+            <li>Your use of AI model outputs</li>
+        </ul>
+
+        <h2>12. Termination</h2>
+
+        <p>You may terminate your account at any time through your account settings or by contacting support. We may suspend or terminate your access to the Service if:</p>
+
+        <ul>
+            <li>You violate these Terms or our Acceptable Use Policy</li>
+            <li>You fail to pay fees when due</li>
+            <li>Your use poses a security risk or legal liability</li>
+            <li>Required by law or regulatory authority</li>
+        </ul>
+
+        <p>Upon termination, your right to use the Service ceases immediately. Unused fees are non-refundable.</p>
+
+        <h2>13. Export Controls and Sanctions</h2>
+
+        <p>You agree to comply with all applicable export control and sanctions laws, including U.S. export control regulations. You represent and warrant that:</p>
+
+        <ul>
+            <li>You are not located in, or a national of, a country subject to comprehensive sanctions</li>
+            <li>You are not on any restricted party list</li>
+            <li>You will not use our Service for any prohibited end use</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>Sanctions Notice:</strong> Our Service is not available to users in comprehensively sanctioned countries. We reserve the right to verify user eligibility and block access from prohibited jurisdictions.
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>14. Changes to These Terms</h2>
+
+        <p>We may update these Terms from time to time to reflect changes in our Service, legal requirements, or business practices. We will provide notice of material changes by:</p>
+
+        <ul>
+            <li>Posting the updated Terms on our website</li>
+            <li>Updating the "Last Updated" date</li>
+            <li>Sending an email notification for significant changes</li>
+        </ul>
+
+        <p>Your continued use of the Service after changes take effect constitutes acceptance of the updated Terms.</p>
+
+        <h2>15. Governing Law</h2>
+
+        <p>These Terms shall be governed by and construed in accordance with the laws of Singapore, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts of Singapore.</p>
+
+        <h2>16. Contact Us</h2>
+
+        <p>If you have any questions about these Terms, please contact us:</p>
+
+        <ul>
+            <li>Email: support@rayapi.dev</li>
+            <li>Discord: <a href="https://discord.gg/kHt5MFMEa" target="_blank">Join our community</a></li>
+        </ul>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 RayAPI. All rights reserved. | <a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a> | <a href="acceptable-use.html">Acceptable Use Policy</a></p>
+    </footer>
+</body>
+</html>
