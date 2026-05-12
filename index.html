@@ -1274,6 +1274,32 @@
         .floating {
             animation: float 3s ease-in-out infinite;
         }
+
+        .trial-cta-box {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+            text-align: left;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .trial-cta-text {
+            color: #e5e7eb;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .trial-cta-text a {
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .trial-cta-text a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
@@ -1683,30 +1709,22 @@
     <section class="trial-section" id="trial">
         <div class="trial-content animate-on-scroll">
             <div class="trial-icon">🎁</div>
-            <h2 class="trial-title">Try It Free — 5M Tokens</h2>
+            <h2 class="trial-title">Start Using — Pay As You Go</h2>
             <p class="trial-subtitle">
-                No credit card required. Start building today with generous free credits.
+                No subscription. No monthly fees. Only pay for what you use.
             </p>
-            <form class="trial-form" id="trialForm">
-                <input 
-                    type="email" 
-                    class="form-input" 
-                    placeholder="Enter your work email" 
-                    required
-                    id="emailInput"
-                >
-                <button type="submit" class="btn-submit">Start Free Trial</button>
-            </form>
+            <div class="trial-cta-box">
+                <p class="trial-cta-text">📧 Email us to get started: <strong>swbscut1225@gmail.com</strong></p>
+                <p class="trial-cta-text">💬 Or join Discord: <a href="https://discord.gg/kHt5MFMEa" target="_blank">discord.gg/kHt5MFMEa</a></p>
+                <p class="trial-cta-text">💳 <strong>Pay via PayPal</strong>: <a href="https://paypal.me/raywen985" target="_blank">paypal.me/raywen985</a></p>
+            </div>
             <p class="form-note">
-                🔒 We respect your privacy. No spam, ever.<br>
-                <span style="font-size: 12px; opacity: 0.7;">By signing up, you agree to our <a href="terms.html" style="color: inherit;">Terms of Service</a> and <a href="privacy.html" style="color: inherit;">Privacy Policy</a>.</span>
+                🔒 We respect your privacy. No spam, ever.
             </p>
             <p class="discord-alt">
                 Prefer to chat first? <a href="https://discord.gg/kHt5MFMEa" target="_blank" rel="noopener noreferrer">Join our Discord</a> for real-time discussions and support.
             </p>
-            <div class="form-success" id="formSuccess">
-                ✓ You're all set! Check your email for your free trial access details.
-            </div>
+            
         </div>
     </section>
 
