@@ -1363,11 +1363,11 @@
                     <div class="pricing-breakdown">
                         <div class="price-row">
                             <span class="price-label">Input</span>
-                            <span class="price-value">¥2 <span class="price-unit">/ 1M tokens</span></span>
+                            <span class="price-value">$0.30 <span class="price-unit">/ 1M tokens</span></span>
                         </div>
                         <div class="price-row">
                             <span class="price-label">Output</span>
-                            <span class="price-value">¥3 <span class="price-unit">/ 1M tokens</span></span>
+                            <span class="price-value">$0.50 <span class="price-unit">/ 1M tokens</span></span>
                         </div>
                     </div>
                     <div class="savings-badge">
@@ -1399,11 +1399,11 @@
                     <div class="pricing-breakdown">
                         <div class="price-row">
                             <span class="price-label">Input</span>
-                            <span class="price-value">¥15 <span class="price-unit">/ 1M tokens</span></span>
+                            <span class="price-value">$2.00 <span class="price-unit">/ 1M tokens</span></span>
                         </div>
                         <div class="price-row">
                             <span class="price-label">Output</span>
-                            <span class="price-value">¥15 <span class="price-unit">/ 1M tokens</span></span>
+                            <span class="price-value">$2.00 <span class="price-unit">/ 1M tokens</span></span>
                         </div>
                     </div>
                     <div class="savings-badge">
@@ -1435,11 +1435,11 @@
                     <div class="pricing-breakdown">
                         <div class="price-row">
                             <span class="price-label">Input</span>
-                            <span class="price-value">¥1 <span class="price-unit">/ 1M tokens</span></span>
+                            <span class="price-value">$0.15 <span class="price-unit">/ 1M tokens</span></span>
                         </div>
                         <div class="price-row">
                             <span class="price-label">Output</span>
-                            <span class="price-value">¥3 <span class="price-unit">/ 1M tokens</span></span>
+                            <span class="price-value">$0.50 <span class="price-unit">/ 1M tokens</span></span>
                         </div>
                     </div>
                     <div class="savings-badge">
@@ -1544,7 +1544,7 @@
                     <div class="feature-icon">🌍</div>
                     <h3 class="feature-title">No Chinese Phone/Alipay</h3>
                     <p class="feature-description">
-                        Sign up with email. Pay with Stripe. 
+                        Sign up with email. Pay with PayPal. 
                         No Chinese phone number, no Alipay, no VPN needed.
                     </p>
                 </div>
@@ -1645,7 +1645,7 @@
                     </div>
                     <div class="code-line">
                         <span class="line-number">5</span>
-                        <span>    base_url=<span class="code-string">"https://api.rayapi.dev/v1"</span></span>
+                        <span>    base_url=<span class="code-string">"https://app.rayapi.dev/v1"</span></span>
                     </div>
                     <div class="code-line">
                         <span class="line-number">6</span>
@@ -1762,7 +1762,7 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>No! Sign up with just your email address. Pay with Stripe using your credit card. No Chinese phone number, no Alipay, no VPN required.</p>
+                        <p>No! Sign up with just your email address. Pay with PayPal. No Chinese phone number, no Alipay, no VPN required.</p>
                     </div>
                 </div>
 
@@ -1782,7 +1782,7 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Our API follows the OpenAI format. Just change the base_url from "https://api.openai.com/v1" to "https://api.rayapi.dev/v1" and you're done. Same SDKs, same code patterns.</p>
+                        <p>Yes! Our API follows the OpenAI format. Just change the base_url from "https://api.openai.com/v1" to "https://app.rayapi.dev/v1" and you're done. Same SDKs, same code patterns.</p>
                     </div>
                 </div>
 
@@ -1822,7 +1822,7 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>We accept all major credit cards through Stripe, including Visa, Mastercard, and American Express. Cryptocurrency payments coming soon.</p>
+                        <p>We accept PayPal payments, including Visa, Mastercard, and American Express. Cryptocurrency payments coming soon.</p>
                     </div>
                 </div>
             </div>
@@ -1968,7 +1968,7 @@
                                   (tokens * 1000000 * outputRatio / 1000000 * openaiOutput);
             
             // Our average pricing (weighted by model usage)
-            // DeepSeek V4: ¥2/¥3, Kimi K2.5: ¥15/¥15, Doubao Pro: ¥1/¥3
+            // DeepSeek V4: $0.30/$0.50, Kimi K2.5: $2.00/$2.00, Doubao Pro: $0.15/$0.50
             // Using USD equivalent: DeepSeek ~$0.28/$0.42, Kimi ~$2.10/$2.10, Doubao ~$0.14/$0.42
             // Assume 50% DeepSeek V4, 30% Kimi K2.5, 20% Doubao Pro
             const ourInputAvg = 0.28 * 0.5 + 2.10 * 0.3 + 0.14 * 0.2;
