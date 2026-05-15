@@ -43,7 +43,7 @@
         .model-features li { padding: 8px 0; color: #555; }
         .model-features li::before { content: '✓ '; color: #10b981; font-weight: bold; }
         
-        /* NEW: Trust Features Section */
+        /* Trust Features Section */
         .trust-features { padding: 60px 20px; background: #f8f9fa; }
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
         .feature-card { background: white; border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
@@ -59,14 +59,50 @@
         .why-content h3 { font-size: 1.1rem; margin-bottom: 5px; }
         .why-content p { color: #666; font-size: 0.9rem; }
         
-        /* Migration Section */
+        /* Migration Section - FIXED */
         .migration { padding: 60px 20px; background: #1a1a2e; color: white; text-align: center; }
         .migration h2 { font-size: 2rem; margin-bottom: 20px; }
         .migration p { margin-bottom: 30px; opacity: 0.8; }
-        .code-block { background: #0f0f1a; padding: 20px; border-radius: 8px; text-align: left; max-width: 600px; margin: 0 auto; font-family: 'Monaco', 'Menlo', monospace; font-size: 0.9rem; overflow-x: auto; }
-        .code-block .comment { color: #6a6; }
-        .code-block .string { color: #a66; }
-        .code-block .keyword { color: #66a; }
+        
+        /* Code Block - FIXED for proper copy */
+        .code-block { 
+            background: #0d1117; 
+            border-radius: 8px; 
+            text-align: left; 
+            max-width: 650px; 
+            margin: 0 auto; 
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .code-header {
+            background: #161b22;
+            padding: 10px 15px;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .code-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .code-dot.red { background: #ff5f56; }
+        .code-dot.yellow { background: #ffbd2e; }
+        .code-dot.green { background: #27ca40; }
+        .code-label { color: #8b949e; font-size: 0.85rem; margin-left: auto; }
+        .code-content {
+            padding: 20px;
+            overflow-x: auto;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #c9d1d9;
+            white-space: pre;
+            margin: 0;
+        }
+        /* Syntax highlighting */
+        .code-content .keyword { color: #ff7b72; }
+        .code-content .string { color: #a5d6ff; }
+        .code-content .comment { color: #8b949e; }
+        .code-content .function { color: #d2a8ff; }
+        .code-content .variable { color: #ffa657; }
         
         /* Steps Section */
         .steps { padding: 60px 20px; }
@@ -89,6 +125,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             .section-title { font-size: 1.8rem; }
+            .code-content { font-size: 12px; }
         }
     </style>
 </head>
@@ -272,24 +309,31 @@
         </div>
     </section>
     
-    <!-- Migration -->
+    <!-- Migration - FIXED Code Block -->
     <section class="migration">
         <div class="container">
             <h2>Same Code, 90% Less Cost</h2>
             <p>Already using OpenAI? Just change the base URL and you're done.</p>
+            
             <div class="code-block">
-<span class="comment"># Your existing OpenAI code</span>
+                <div class="code-header">
+                    <span class="code-dot red"></span>
+                    <span class="code-dot yellow"></span>
+                    <span class="code-dot green"></span>
+                    <span class="code-label">Python</span>
+                </div>
+                <pre class="code-content"><span class="comment"># Your existing OpenAI code</span>
 <span class="keyword">import</span> openai
 
 client = openai.OpenAI(
     api_key=<span class="string">"sk-your-key"</span>,
-    base_url=<span class="string">"https://app.rayapi.dev/v1"</span>  <span class="comment"># Just change this!</span>
+    base_url=<span class="string">"https://app.rayapi.dev/v1"</span>
 )
 
 response = client.chat.completions.create(
     model=<span class="string">"deepseek-chat"</span>,
     messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Hello!"</span>}]
-)
+)</pre>
             </div>
         </div>
     </section>
