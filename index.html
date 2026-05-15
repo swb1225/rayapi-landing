@@ -3,411 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RayAPI - Enterprise-Grade AI APIs at 70-90% Less Than OpenAI</title>
+    <title>RayAPI - Enterprise-Grade AI APIs at 70-90% Less</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1f2937; background: #fff; }
+        
+        /* Navigation */
+        nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e7eb; z-index: 100; padding: 16px 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.5rem; font-weight: 800; color: #111827; }
+        .nav-logo span { color: #6366f1; }
+        .nav-cta { background: #111827; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
+        .nav-cta:hover { background: #374151; transform: translateY(-1px); }
         
         /* Hero Section */
-        .hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; }
-        .hero p { font-size: 1.25rem; margin-bottom: 30px; opacity: 0.95; }
-        .hero .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 50px; margin-bottom: 20px; font-size: 0.9rem; }
-        .cta-btn { display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: transform 0.2s; }
-        .cta-btn:hover { transform: scale(1.05); }
+        .hero { padding: 160px 24px 100px; text-align: center; background: linear-gradient(180deg, #f9fafb 0%, #fff 100%); }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: #eef2ff; color: #6366f1; padding: 8px 16px; border-radius: 100px; font-size: 0.875rem; font-weight: 500; margin-bottom: 24px; }
+        .hero-badge::before { content: '✨'; }
+        .hero h1 { font-size: 4rem; font-weight: 800; color: #111827; line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.02em; }
+        .hero h1 .highlight { background: linear-gradient(135deg, #6366f1, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.5rem; color: #6b7280; max-width: 700px; margin: 0 auto 40px; }
+        .hero-cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: #6366f1; color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-primary:hover { background: #4f46e5; transform: translateY(-2px); box-shadow: 0 10px 40px rgba(99,102,241,0.3); }
+        .btn-secondary { background: white; color: #374151; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 1px solid #e5e7eb; transition: all 0.2s; }
+        .btn-secondary:hover { background: #f9fafb; border-color: #d1d5db; }
         
-        /* Trust Badges */
-        .trust-badges { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 40px 20px; background: #f8f9fa; }
-        .trust-item { text-align: center; }
-        .trust-item .number { font-size: 2rem; font-weight: 700; color: #667eea; }
-        .trust-item .label { color: #666; font-size: 0.9rem; }
+        /* Stats */
+        .stats { padding: 60px 24px; background: #111827; }
+        .stats-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
+        .stat-item h3 { font-size: 3rem; font-weight: 800; color: white; margin-bottom: 8px; }
+        .stat-item p { color: #9ca3af; font-size: 1.1rem; }
         
-        /* Pricing Section */
-        .pricing { padding: 60px 20px; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+        /* Trust Features */
+        .trust-section { padding: 100px 24px; background: #fff; }
+        .section-label { text-align: center; color: #6366f1; font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+        .section-title { text-align: center; font-size: 2.5rem; font-weight: 800; color: #111827; margin-bottom: 60px; }
+        .trust-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .trust-card { background: #f9fafb; border-radius: 20px; padding: 40px; transition: all 0.3s; }
+        .trust-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .trust-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #6366f1, #8b5cf6); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 24px; }
+        .trust-card h3 { font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 12px; }
+        .trust-card p { color: #6b7280; font-size: 1rem; line-height: 1.7; }
         
-        .models-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .model-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.2s; }
-        .model-card:hover { transform: translateY(-5px); }
-        .model-card.featured { border: 2px solid #667eea; position: relative; }
-        .model-card.featured::before { content: 'Best Value'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #667eea; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem; }
-        .model-name { font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; }
-        .model-desc { color: #666; margin-bottom: 20px; }
-        .model-price { display: flex; gap: 20px; margin-bottom: 20px; }
-        .price-item { flex: 1; text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px; }
-        .price-item .amount { font-size: 1.5rem; font-weight: 700; color: #667eea; }
-        .price-item .label { font-size: 0.8rem; color: #666; }
-        .model-savings { color: #10b981; font-weight: 600; margin-bottom: 20px; }
-        .model-features { list-style: none; }
-        .model-features li { padding: 8px 0; color: #555; }
-        .model-features li::before { content: '✓ '; color: #10b981; font-weight: bold; }
+        /* Pricing */
+        .pricing-section { padding: 100px 24px; background: #f9fafb; }
+        .pricing-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .pricing-card { background: white; border-radius: 24px; padding: 40px; border: 2px solid transparent; transition: all 0.3s; }
+        .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .pricing-card.featured { border-color: #6366f1; position: relative; box-shadow: 0 20px 60px rgba(99,102,241,0.2); }
+        .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #6366f1; color: white; padding: 6px 20px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; }
+        .pricing-name { font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 8px; }
+        .pricing-desc { color: #6b7280; font-size: 0.95rem; margin-bottom: 24px; }
+        .pricing-price { display: flex; gap: 8px; margin-bottom: 20px; }
+        .pricing-amount { font-size: 2.5rem; font-weight: 800; color: #111827; }
+        .pricing-unit { color: #6b7280; font-size: 1rem; align-self: flex-end; margin-bottom: 8px; }
+        .pricing-savings { background: #ecfdf5; color: #059669; padding: 8px 16px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; display: inline-block; margin-bottom: 24px; }
+        .pricing-features { list-style: none; }
+        .pricing-features li { padding: 12px 0; color: #374151; font-size: 0.95rem; display: flex; align-items: center; gap: 12px; }
+        .pricing-features li::before { content: '✓'; width: 24px; height: 24px; background: #eef2ff; color: #6366f1; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
         
-        /* Trust Features Section */
-        .trust-features { padding: 60px 20px; background: #f8f9fa; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
-        .feature-card { background: white; border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .feature-icon { font-size: 3rem; margin-bottom: 15px; }
-        .feature-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; color: #333; }
-        .feature-desc { color: #666; font-size: 0.95rem; }
+        /* Code Section */
+        .code-section { padding: 100px 24px; background: #0f172a; }
+        .code-section .section-label { color: #818cf8; }
+        .code-section .section-title { color: white; }
+        .code-block { max-width: 750px; margin: 0 auto; background: #1e293b; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.4); }
+        .code-header { background: #334155; padding: 16px 20px; display: flex; align-items: center; gap: 8px; }
+        .code-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .code-dot:nth-child(1) { background: #ef4444; }
+        .code-dot:nth-child(2) { background: #f59e0b; }
+        .code-dot:nth-child(3) { background: #22c55e; }
+        .code-label { color: #94a3b8; font-size: 0.85rem; margin-left: auto; }
+        .code-content { padding: 24px; overflow-x: auto; }
+        .code-content pre { margin: 0; font-family: 'SF Mono', Monaco, Consolas, monospace; font-size: 14px; line-height: 1.7; color: #e2e8f0; white-space: pre; }
+        .code-content .keyword { color: #c084fc; }
+        .code-content .string { color: #34d399; }
+        .code-content .comment { color: #64748b; }
         
         /* Why Section */
-        .why { padding: 60px 20px; }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .why-item { display: flex; gap: 15px; }
-        .why-icon { font-size: 2rem; flex-shrink: 0; }
-        .why-content h3 { font-size: 1.1rem; margin-bottom: 5px; }
-        .why-content p { color: #666; font-size: 0.9rem; }
+        .why-section { padding: 100px 24px; background: #fff; }
+        .why-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .why-item { text-align: center; }
+        .why-icon { width: 64px; height: 64px; background: linear-gradient(135deg, #f3f4f6, #e5e7eb); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin: 0 auto 20px; }
+        .why-item h3 { font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 8px; }
+        .why-item p { color: #6b7280; font-size: 0.95rem; }
         
-        /* Migration Section - FIXED */
-        .migration { padding: 60px 20px; background: #1a1a2e; color: white; text-align: center; }
-        .migration h2 { font-size: 2rem; margin-bottom: 20px; }
-        .migration p { margin-bottom: 30px; opacity: 0.8; }
+        /* CTA Section */
+        .cta-section { padding: 100px 24px; background: linear-gradient(135deg, #6366f1, #8b5cf6); text-align: center; }
+        .cta-section h2 { font-size: 3rem; font-weight: 800; color: white; margin-bottom: 20px; }
+        .cta-section p { font-size: 1.25rem; color: rgba(255,255,255,0.8); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-section .btn-primary { background: white; color: #6366f1; }
+        .cta-section .btn-primary:hover { background: #f9fafb; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
         
-        /* Code Block - FIXED for proper copy */
-        .code-block { 
-            background: #0d1117; 
-            border-radius: 8px; 
-            text-align: left; 
-            max-width: 650px; 
-            margin: 0 auto; 
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-        .code-header {
-            background: #161b22;
-            padding: 10px 15px;
-            border-bottom: 1px solid #30363d;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .code-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .code-dot.red { background: #ff5f56; }
-        .code-dot.yellow { background: #ffbd2e; }
-        .code-dot.green { background: #27ca40; }
-        .code-label { color: #8b949e; font-size: 0.85rem; margin-left: auto; }
-        .code-content {
-            padding: 20px;
-            overflow-x: auto;
-            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-            font-size: 14px;
-            line-height: 1.6;
-            color: #c9d1d9;
-            white-space: pre;
-            margin: 0;
-        }
-        /* Syntax highlighting */
-        .code-content .keyword { color: #ff7b72; }
-        .code-content .string { color: #a5d6ff; }
-        .code-content .comment { color: #8b949e; }
-        .code-content .function { color: #d2a8ff; }
-        .code-content .variable { color: #ffa657; }
-        
-        /* Steps Section */
-        .steps { padding: 60px 20px; }
-        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
-        .step { padding: 30px; }
-        .step-number { width: 50px; height: 50px; background: #667eea; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 20px; }
-        .step h3 { margin-bottom: 10px; }
-        .step p { color: #666; }
-        
-        /* FAQ Section */
-        .faq { padding: 60px 20px; max-width: 800px; margin: 0 auto; }
-        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        .faq-item h3 { margin-bottom: 10px; color: #333; }
-        .faq-item p { color: #666; }
+        /* FAQ */
+        .faq-section { padding: 100px 24px; background: #f9fafb; }
+        .faq-grid { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: white; border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+        .faq-item h3 { font-size: 1.1rem; font-weight: 600; color: #111827; margin-bottom: 12px; }
+        .faq-item p { color: #6b7280; font-size: 1rem; line-height: 1.7; }
         
         /* Footer */
-        footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
-        footer a { color: #667eea; text-decoration: none; }
+        footer { padding: 60px 24px; background: #111827; text-align: center; }
+        footer p { color: #9ca3af; font-size: 1rem; }
+        footer a { color: #6366f1; text-decoration: none; }
         
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .section-title { font-size: 1.8rem; }
-            .code-content { font-size: 12px; }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .stats-grid, .trust-grid, .pricing-grid, .why-grid { grid-template-columns: 1fr; gap: 20px; }
+            .section-title { font-size: 2rem; }
+            .cta-section h2 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Ray<span>API</span></div>
+            <a href="https://discord.gg/kHt5MFMEa" class="nav-cta">Get API Key →</a>
+        </div>
+    </nav>
+    
     <!-- Hero -->
     <section class="hero">
-        <div class="container">
-            <div class="badge">🎉 200K Free Tokens — No Credit Card</div>
-            <h1>Enterprise-Grade AI APIs at<br>70-90% Less Than OpenAI</h1>
-            <p>Pay only for what you use. No monthly fees. Cancel anytime.</p>
-            <a href="https://discord.gg/kHt5MFMEa" class="cta-btn">Start Using — 200K Free Tokens</a>
+        <div class="hero-badge">200K Free Tokens for New Users</div>
+        <h1>Enterprise AI APIs at<br><span class="highlight">70-90% Less Cost</span></h1>
+        <p>Access DeepSeek, Kimi, and Doubao models via OpenAI-compatible API. No VPN, no ban risk, no monthly fees.</p>
+        <div class="hero-cta-group">
+            <a href="https://discord.gg/kHt5MFMEa" class="btn-primary">Start Free →</a>
+            <a href="https://rayapi.dev" class="btn-secondary">View Pricing</a>
         </div>
     </section>
     
-    <!-- Trust Badges -->
-    <section class="trust-badges">
-        <div class="trust-item">
-            <div class="number">70-90%</div>
-            <div class="label">Cheaper than OpenAI</div>
-        </div>
-        <div class="trust-item">
-            <div class="number">Pay-as-you-go</div>
-            <div class="label">No monthly fees</div>
-        </div>
-        <div class="trust-item">
-            <div class="number">OpenAI</div>
-            <div class="label">Compatible API</div>
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>70-90%</h3>
+                <p>Savings vs OpenAI</p>
+            </div>
+            <div class="stat-item">
+                <h3>2-3s</h3>
+                <p>Average Response Time</p>
+            </div>
+            <div class="stat-item">
+                <h3>$0</h3>
+                <p>Monthly Minimums</p>
+            </div>
         </div>
     </section>
     
-    <!-- NEW: Trust Features -->
-    <section class="trust-features">
-        <div class="container">
-            <h2 class="section-title">Why Developers Choose RayAPI</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <div class="feature-title">Zero Ban Risk</div>
-                    <div class="feature-desc">Direct API access without VPN or phone verification. No risk of account suspension like official APIs.</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
-                    <div class="feature-title">Credits Never Expire</div>
-                    <div class="feature-desc">Pay once, use forever. Your credits stay valid indefinitely — no time pressure.</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <div class="feature-title">Fast Response Time</div>
-                    <div class="feature-desc">Optimized infrastructure with average 2-3s response time. Built for production workloads.</div>
-                </div>
+    <!-- Trust Features -->
+    <section class="trust-section">
+        <div class="section-label">Why RayAPI</div>
+        <h2 class="section-title">Built for Production Developers</h2>
+        <div class="trust-grid">
+            <div class="trust-card">
+                <div class="trust-icon">🛡️</div>
+                <h3>Zero Ban Risk</h3>
+                <p>Direct API access without VPN or phone verification. No risk of account suspension like official APIs.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">⏰</div>
+                <h3>Credits Never Expire</h3>
+                <p>Pay once, use forever. Your credits stay valid indefinitely — no time pressure, no expiration anxiety.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">⚡</div>
+                <h3>Fast & Reliable</h3>
+                <p>Optimized infrastructure with 2-3s average response time. Built for production workloads.</p>
             </div>
         </div>
     </section>
     
     <!-- Pricing -->
-    <section class="pricing">
-        <div class="container">
-            <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <div class="models-grid">
-                <!-- DeepSeek -->
-                <div class="model-card featured">
-                    <div class="model-name">DeepSeek V4</div>
-                    <div class="model-desc">Best for complex reasoning, coding, agents</div>
-                    <div class="model-price">
-                        <div class="price-item">
-                            <div class="amount">$0.30</div>
-                            <div class="label">/ 1M input</div>
-                        </div>
-                        <div class="price-item">
-                            <div class="amount">$0.50</div>
-                            <div class="label">/ 1M output</div>
-                        </div>
-                    </div>
-                    <div class="model-savings">vs GPT-4o: Save 85%</div>
-                    <ul class="model-features">
-                        <li>Complex reasoning & analysis</li>
-                        <li>Code generation & debugging</li>
-                        <li>Agentic workflows</li>
-                        <li>128K context window</li>
-                    </ul>
+    <section class="pricing-section">
+        <div class="section-label">Pricing</div>
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <div class="pricing-grid">
+            <!-- DeepSeek -->
+            <div class="pricing-card featured">
+                <span class="pricing-badge">Best Value</span>
+                <div class="pricing-name">DeepSeek V4</div>
+                <div class="pricing-desc">Complex reasoning, coding, agents</div>
+                <div class="pricing-price">
+                    <span class="pricing-amount">$0.30</span>
+                    <span class="pricing-unit">/ 1M input</span>
                 </div>
-                
-                <!-- Kimi -->
-                <div class="model-card">
-                    <div class="model-name">Kimi K2.5</div>
-                    <div class="model-desc">Best for long documents, research, analysis</div>
-                    <div class="model-price">
-                        <div class="price-item">
-                            <div class="amount">$2.00</div>
-                            <div class="label">/ 1M input</div>
-                        </div>
-                        <div class="price-item">
-                            <div class="amount">$2.00</div>
-                            <div class="label">/ 1M output</div>
-                        </div>
-                    </div>
-                    <div class="model-savings">vs GPT-4o: Save 50%</div>
-                    <ul class="model-features">
-                        <li>Long document processing</li>
-                        <li>Research & analysis</li>
-                        <li>Multimodal support</li>
-                        <li>200K context window</li>
-                    </ul>
+                <span class="pricing-savings">Save 85% vs GPT-4o</span>
+                <ul class="pricing-features">
+                    <li>128K context window</li>
+                    <li>Code generation & debugging</li>
+                    <li>Agentic workflows</li>
+                    <li>Complex reasoning</li>
+                </ul>
+            </div>
+            <!-- Kimi -->
+            <div class="pricing-card">
+                <div class="pricing-name">Kimi K2.5</div>
+                <div class="pricing-desc">Long documents, research</div>
+                <div class="pricing-price">
+                    <span class="pricing-amount">$2.00</span>
+                    <span class="pricing-unit">/ 1M tokens</span>
                 </div>
-                
-                <!-- Doubao -->
-                <div class="model-card">
-                    <div class="model-name">Doubao Pro</div>
-                    <div class="model-desc">Best for high-volume, cost-sensitive tasks</div>
-                    <div class="model-price">
-                        <div class="price-item">
-                            <div class="amount">$0.15</div>
-                            <div class="label">/ 1M input</div>
-                        </div>
-                        <div class="price-item">
-                            <div class="amount">$0.50</div>
-                            <div class="label">/ 1M output</div>
-                        </div>
-                    </div>
-                    <div class="model-savings">vs GPT-4o: Save 90%</div>
-                    <ul class="model-features">
-                        <li>High-volume tasks</li>
-                        <li>Real-time applications</li>
-                        <li>Cost optimization</li>
-                        <li>256K context window</li>
-                    </ul>
+                <span class="pricing-savings">Save 50% vs GPT-4o</span>
+                <ul class="pricing-features">
+                    <li>200K context window</li>
+                    <li>Long document processing</li>
+                    <li>Research & analysis</li>
+                    <li>Multimodal support</li>
+                </ul>
+            </div>
+            <!-- Doubao -->
+            <div class="pricing-card">
+                <div class="pricing-name">Doubao Pro</div>
+                <div class="pricing-desc">High-volume, cost-sensitive</div>
+                <div class="pricing-price">
+                    <span class="pricing-amount">$0.15</span>
+                    <span class="pricing-unit">/ 1M input</span>
                 </div>
+                <span class="pricing-savings">Save 90% vs GPT-4o</span>
+                <ul class="pricing-features">
+                    <li>256K context window</li>
+                    <li>High-volume tasks</li>
+                    <li>Real-time applications</li>
+                    <li>Maximum savings</li>
+                </ul>
             </div>
         </div>
     </section>
     
-    <!-- Why Section -->
-    <section class="why">
-        <div class="container">
-            <h2 class="section-title">More Than Just Cheap</h2>
-            <p style="text-align:center; color:#666; margin-bottom:40px;">Built for developers who need power without the headaches.</p>
-            <div class="why-grid">
-                <div class="why-item">
-                    <div class="why-icon">💰</div>
-                    <div class="why-content">
-                        <h3>Pay As You Go</h3>
-                        <p>No monthly fees. Only pay for tokens you actually use.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <div class="why-icon">🔄</div>
-                    <div class="why-content">
-                        <h3>OpenAI Compatible</h3>
-                        <p>Change one line of code. Same SDKs, same format.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <div class="why-icon">🌍</div>
-                    <div class="why-content">
-                        <h3>No Chinese Phone/Alipay</h3>
-                        <p>Sign up with email. Pay with PayPal. No VPN needed.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <div class="why-icon">📖</div>
-                    <div class="why-content">
-                        <h3>English Docs & Support</h3>
-                        <p>Full English documentation and chat support.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <div class="why-icon">🔒</div>
-                    <div class="why-content">
-                        <h3>Data Privacy First</h3>
-                        <p>Your prompts are never stored or used for training.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <div class="why-icon">🌐</div>
-                    <div class="why-content">
-                        <h3>Global Accessibility</h3>
-                        <p>PayPal accepted worldwide. English support ready.</p>
-                    </div>
-                </div>
+    <!-- Code -->
+    <section class="code-section">
+        <div class="section-label">Integration</div>
+        <h2 class="section-title">One-Line Migration</h2>
+        <div class="code-block">
+            <div class="code-header">
+                <span class="code-dot"></span>
+                <span class="code-dot"></span>
+                <span class="code-dot"></span>
+                <span class="code-label">Python</span>
             </div>
-        </div>
-    </section>
-    
-    <!-- Migration - FIXED Code Block -->
-    <section class="migration">
-        <div class="container">
-            <h2>Same Code, 90% Less Cost</h2>
-            <p>Already using OpenAI? Just change the base URL and you're done.</p>
-            
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="code-dot red"></span>
-                    <span class="code-dot yellow"></span>
-                    <span class="code-dot green"></span>
-                    <span class="code-label">Python</span>
-                </div>
-                <pre class="code-content"><span class="comment"># Your existing OpenAI code</span>
-<span class="keyword">import</span> openai
+            <div class="code-content">
+<pre>import openai
 
 client = openai.OpenAI(
-    api_key=<span class="string">"sk-your-key"</span>,
-    base_url=<span class="string">"https://app.rayapi.dev/v1"</span>
+    api_key="<span class="string">sk-your-key</span>",
+    base_url="<span class="string">https://app.rayapi.dev/v1</span>"
 )
 
 response = client.chat.completions.create(
-    model=<span class="string">"deepseek-chat"</span>,
-    messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Hello!"</span>}]
+    model="<span class="string">deepseek-chat</span>",
+    messages=[{"<span class="string">role</span>": "<span class="string">user</span>", "<span class="string">content</span>": "<span class="string">Hello!</span>"}]
 )</pre>
             </div>
         </div>
     </section>
     
-    <!-- Steps -->
-    <section class="steps">
-        <div class="container">
-            <h2 class="section-title">Get Started in Minutes</h2>
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Join Our Discord</h3>
-                    <p>Get free API access and community support</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Get Your API Key</h3>
-                    <p>200,000 free tokens to test our API</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Pay via PayPal</h3>
-                    <p>Add credits when you're ready to scale</p>
-                </div>
+    <!-- Why -->
+    <section class="why-section">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">More Than Just Cheap</h2>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">💳</div>
+                <h3>Pay As You Go</h3>
+                <p>No monthly fees. Only pay for tokens you use.</p>
             </div>
-            <p style="text-align:center; margin-top:30px;">
-                <a href="https://discord.gg/kHt5MFMEa" class="cta-btn" style="background:#667eea; color:white;">Join Discord →</a>
-            </p>
+            <div class="why-item">
+                <div class="why-icon">🔄</div>
+                <h3>OpenAI Compatible</h3>
+                <p>Change one line. Same SDKs, same format.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">🌍</div>
+                <h3>Global Access</h3>
+                <p>No Chinese phone, no Alipay, no VPN needed.</p>
+            </div>
         </div>
     </section>
     
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Save 90% on AI?</h2>
+        <p>Join thousands of developers using RayAPI for their production workloads.</p>
+        <a href="https://discord.gg/kHt5MFMEa" class="btn-primary">Get 200K Free Tokens →</a>
+    </section>
+    
     <!-- FAQ -->
-    <section class="faq">
-        <h2 class="section-title">Questions? Answers.</h2>
-        <div class="faq-item">
-            <h3>Do I need a Chinese phone number?</h3>
-            <p>No! Sign up with just your email address. Pay with PayPal. No Chinese phone number, no Alipay, no VPN required.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How does pay-as-you-go work?</h3>
-            <p>You're billed only for the tokens you actually consume. There's no monthly fee or subscription. Your credits never expire.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Is the API compatible with OpenAI?</h3>
-            <p>Yes! Our API follows the OpenAI format. Just change the base_url and you're done. Same SDKs, same code patterns.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What models are available?</h3>
-            <p>We offer DeepSeek V4 (cost-effective reasoning), Kimi K2.5 (premium long-context), and Doubao Pro (ultra-budget). All are OpenAI-compatible.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Is there any ban risk?</h3>
-            <p>No! Unlike official APIs that can suspend your account at any time, RayAPI provides direct API access without the risk of bans or VPN blocks.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Do my credits expire?</h3>
-            <p>No! Credits purchased via PayPal never expire. Use them at your own pace.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What payment methods do you accept?</h3>
-            <p>We accept PayPal payments, including Visa, Mastercard, and American Express.</p>
+    <section class="faq-section">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Common Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>Do I need a Chinese phone number?</h3>
+                <p>No! Sign up with just your email address. Pay with PayPal. No Chinese phone, no Alipay, no VPN required.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How does pay-as-you-go work?</h3>
+                <p>You're billed only for tokens you consume. No monthly fee. Credits never expire.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is the API compatible with OpenAI?</h3>
+                <p>Yes! Just change the base_url. Same SDKs, same code patterns.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is there any ban risk?</h3>
+                <p>No! RayAPI provides direct API access without the risk of bans or VPN blocks.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What payment methods do you accept?</h3>
+                <p>PayPal, Visa, Mastercard, American Express. Cryptocurrency coming soon.</p>
+            </div>
         </div>
     </section>
     
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p><a href="https://rayapi.dev">RayAPI</a> — Enterprise-Grade AI APIs at 70-90% Less Than OpenAI</p>
-            <p style="margin-top:10px; opacity:0.7; font-size:0.9rem;">
-                <a href="https://discord.gg/kHt5MFMEa">Discord</a> · 
-                <a href="https://paypal.me/raywen985">PayPal</a> · 
-                <a href="mailto:lulu@coze.email">Contact</a>
-            </p>
-        </div>
+        <p>RayAPI — Enterprise AI APIs at 70-90% Less Than OpenAI</p>
+        <p style="margin-top:16px; font-size:0.9rem;">
+            <a href="https://discord.gg/kHt5MFMEa">Discord</a> · 
+            <a href="https://paypal.me/raywen985">PayPal</a> · 
+            <a href="mailto:lulu@coze.email">Contact</a>
+        </p>
     </footer>
 </body>
 </html>
